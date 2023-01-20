@@ -1,0 +1,106 @@
+{
+  "project_info": {
+    "project_number": "955217608438",
+    "firebase_url": "https://sturec-school-setup-ace30-default-rtdb.firebaseio.com",
+    "project_id": "sturec-school-setup-ace30",
+    "storage_bucket": "sturec-school-setup-ace30.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:955217608438:android:dc3b2095229818b355b6d7",
+        "android_client_info": {
+          "package_name": "com.example.sturecadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "955217608438-7m5fj0d8u98p485vbfmolsomjrue1rvv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sturecadmin",
+            "certificate_hash": "8943279c878ccdf2e028369ea0e2c6ba77fd8ca1"
+          }
+        },
+        {
+          "client_id": "955217608438-2fogj1brb9jgidessgkjiob76jp4e6b8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9vGzrn8nJm95D1PmZGxFKxzNuFbsmTDQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "955217608438-2fogj1brb9jgidessgkjiob76jp4e6b8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:955217608438:android:ff9ae4c20e3777b255b6d7",
+        "android_client_info": {
+          "package_name": "com.example.sturecdriver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "955217608438-2fogj1brb9jgidessgkjiob76jp4e6b8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9vGzrn8nJm95D1PmZGxFKxzNuFbsmTDQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "955217608438-2fogj1brb9jgidessgkjiob76jp4e6b8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:955217608438:android:d85ca82a59ed7bcc55b6d7",
+        "android_client_info": {
+          "package_name": "com.example.sturecschoolsetup"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "955217608438-2fogj1brb9jgidessgkjiob76jp4e6b8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9vGzrn8nJm95D1PmZGxFKxzNuFbsmTDQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "955217608438-2fogj1brb9jgidessgkjiob76jp4e6b8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
