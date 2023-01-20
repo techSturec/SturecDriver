@@ -1,18 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <EditText
+        android:id="@+id/signInPhNo"
+        android:layout_width="330dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="170dp"
+        android:hint="Phone Number">
+    </EditText>
+
+
+
+
+    <EditText
+        android:id="@+id/signInDriverCode"
+        android:layout_width="330dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/signInPhNo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:hint="Driver Code sfdsfdsdfd">
+    </EditText>
+
+    <EditText
+        android:id="@+id/signInPassword"
+        android:layout_width="330dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/signInDriverCode"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:hint="Password ">
+    </EditText>
+
+    <Button
+        android:id="@+id/signInBtn"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/signInPassword"
+        android:text="Log In">
+    </Button>
+
     <TextView
+        android:id="@+id/signIn_Signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Don't have an account? Sign Up"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/signInBtn"
+        android:layout_marginTop="20dp">
+    </TextView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>
