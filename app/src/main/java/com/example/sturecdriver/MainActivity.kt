@@ -66,7 +66,7 @@ class MainActivity : AppCompatActivity() {
             //Log.d("check", "check")
             val user: Task<DataSnapshot> = FirebaseDatabase.getInstance().reference.child("ss").child("Buses")
                 .child(drivercode.text.toString()).get().addOnSuccessListener {
-//
+
                     if(it.exists())
                     {
                         val userPh = it.child("busDriver").value.toString()

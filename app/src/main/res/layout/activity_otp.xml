@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".otp">
+
+    <TextView
+        android:id="@+id/enterotp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter OTP"
+        android:layout_centerHorizontal="true"
+        android:textSize="25dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="170dp">
+    </TextView>
+
+    <EditText
+        android:id="@+id/otp1"
+        android:layout_marginLeft="40dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/enterotp"
+        android:layout_marginTop="20dp">
+    </EditText>
+    <EditText
+        android:id="@+id/otp2"
+        android:layout_toRightOf="@+id/otp1"
+        android:layout_marginLeft="5dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/enterotp"
+        android:layout_marginTop="20dp">
+    </EditText>
+    <EditText
+        android:id="@+id/otp3"
+        android:layout_toRightOf="@+id/otp2"
+        android:layout_marginLeft="5dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/enterotp"
+        android:layout_marginTop="20dp">
+    </EditText>
+    <EditText
+        android:id="@+id/otp4"
+        android:layout_toRightOf="@+id/otp3"
+        android:layout_marginLeft="5dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/enterotp"
+        android:layout_marginTop="20dp">
+    </EditText>
+    <EditText
+        android:id="@+id/otp5"
+        android:layout_toRightOf="@+id/otp4"
+        android:layout_marginLeft="5dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/enterotp"
+        android:layout_marginTop="20dp">
+    </EditText>
+    <EditText
+        android:id="@+id/otp6"
+        android:layout_toRightOf="@+id/otp5"
+        android:layout_marginLeft="5dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/enterotp"
+        android:layout_marginTop="20dp">
+    </EditText>
+
+    <Button
+        android:id="@+id/verifyotp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/otp1"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="verify otp">
+    </Button>
+
+    <Button
+        android:id="@+id/resendotp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/otp1"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="260dp"
+        android:text="resend otp">
+    </Button>
+
+</RelativeLayout>
