@@ -52,6 +52,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "955217608438-6qglvk8g02dc8mjgs50cpnfnkmr4qork.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sturecdriver",
+            "certificate_hash": "8943279c878ccdf2e028369ea0e2c6ba77fd8ca1"
+          }
+        },
+        {
           "client_id": "955217608438-2fogj1brb9jgidessgkjiob76jp4e6b8.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -77,6 +85,35 @@
         "mobilesdk_app_id": "1:955217608438:android:d85ca82a59ed7bcc55b6d7",
         "android_client_info": {
           "package_name": "com.example.sturecschoolsetup"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "955217608438-2fogj1brb9jgidessgkjiob76jp4e6b8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9vGzrn8nJm95D1PmZGxFKxzNuFbsmTDQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "955217608438-2fogj1brb9jgidessgkjiob76jp4e6b8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:955217608438:android:3f259027521aac1255b6d7",
+        "android_client_info": {
+          "package_name": "com.example.sturecteacher"
         }
       },
       "oauth_client": [

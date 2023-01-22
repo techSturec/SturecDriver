@@ -29,10 +29,6 @@ class MainActivity : AppCompatActivity() {
 
 
         val signUptxt = findViewById<TextView>(R.id.signIn_Signup)
-        val phNo = findViewById<EditText>(R.id.signInPhNo)
-        val drivercode = findViewById<EditText>(R.id.signInDriverCode)
-        val busCode = findViewById<EditText>(R.id.signInBusCode)
-        val password = findViewById<EditText>(R.id.signInPassword)
         val logIn = findViewById<Button>(R.id.signInBtn)
         auth = FirebaseAuth.getInstance()
 
@@ -44,53 +40,22 @@ class MainActivity : AppCompatActivity() {
         if (sp.getBoolean("logged", false)) {
             startActivity(Intent(this@MainActivity, Home::class.java))
         }
-        signUptxt.setOnClickListener {
-            startActivity(Intent(this@MainActivity, signUp::class.java))
-            finish()
-        }
+
 
         logIn.setOnClickListener {
             credentialVerify()
-            otpSend()
-
         }
 
 
     }
-
-    private fun otpSend() {
-        val phNo = findViewById<EditText>(R.id.signInPhNo)
-        number = phNo.text.trim().toString()
-        if(number.isNotEmpty()){
-            if (number.length==10){
-                number = "+91$number"
-
-
-                val options = PhoneAuthOptions.newBuilder(auth)
-                    .setPhoneNumber(number)       // Phone number to verify
-                    .setTimeout(60L, TimeUnit.SECONDS) // Timeout and unit
-                    .setActivity(this)                 // Activity (for callback binding)
-                    .setCallbacks(callbacks)          // OnVerificationStateChangedCallbacks
-                    .build()
-                PhoneAuthProvider.verifyPhoneNumber(options)
-            }else{
-                Toast.makeText(this,"Please Enter correct number",Toast.LENGTH_SHORT).show()
-            }
-        }else{
-            Toast.makeText(this,"Please Enter  number",Toast.LENGTH_SHORT).show()
-
-        }
-    }
-
     private fun credentialVerify() {
 
-        val signUptxt = findViewById<TextView>(R.id.signIn_Signup)
+
         val phNo = findViewById<EditText>(R.id.signInPhNo)
         val schoolCode = findViewById<EditText>(R.id.signInSchoolCode)
         val drivercode = findViewById<EditText>(R.id.signInDriverCode)
         val busCode = findViewById<EditText>(R.id.signInBusCode)
         val password = findViewById<EditText>(R.id.signInPassword)
-        val logIn = findViewById<Button>(R.id.signInBtn)
 
 
         val sp = getSharedPreferences("login", MODE_PRIVATE)
@@ -122,21 +87,22 @@ class MainActivity : AppCompatActivity() {
 
         //Log.d("check", "check")
         val user: Task<DataSnapshot> = FirebaseDatabase.getInstance().reference.child(schoolCode.text.toString()).child("Buses")
-            .child(drivercode.text.toString()).get().addOnSuccessListener {
+            .child(busCode.text.toString()).get().addOnSuccessListener {
 
                 if(it.exists())
                 {
                     val userPh = it.child("busDriver").value.toString()
-                    FirebaseDatabase.getInstance().reference.child("ssd").child(userPh).get().addOnSuccessListener {test->
+                    FirebaseDatabase.getInstance().reference.child(drivercode.text.toString()).child(userPh).get().addOnSuccessListener {test->
                         if(test.exists())
                         {
                             val recPassword = test.child("password").value.toString()
                             if(password.text.toString() ==recPassword)
                             {
                                 sp.edit().putBoolean("logged", true).apply()
-                                val intent = Intent(this@MainActivity, Home::class.java)
-                                startActivity(intent)
-                                finish()
+//                                val intent = Intent(this@MainActivity, signUp::class.java)
+//                                startActivity(intent)
+//                                finish()
+                                otpSend()
                             }else
                             {
                                 password.text.clear()
@@ -162,6 +128,31 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "failure, network error", Toast.LENGTH_LONG).show()
             }
     }
+
+    private fun otpSend() {
+        val phNo = findViewById<EditText>(R.id.signInPhNo)
+        number = phNo.text.trim().toString()
+        if(number.isNotEmpty()){
+            if (number.length==10){
+                number = "+91$number"
+
+
+                val options = PhoneAuthOptions.newBuilder(auth)
+                    .setPhoneNumber(number)       // Phone number to verify
+                    .setTimeout(60L, TimeUnit.SECONDS) // Timeout and unit
+                    .setActivity(this)                 // Activity (for callback binding)
+                    .setCallbacks(callbacks)          // OnVerificationStateChangedCallbacks
+                    .build()
+                PhoneAuthProvider.verifyPhoneNumber(options)
+            }else{
+                Toast.makeText(this,"Please Enter correct number",Toast.LENGTH_SHORT).show()
+            }
+        }else{
+            Toast.makeText(this,"Please Enter  number",Toast.LENGTH_SHORT).show()
+
+        }
+    }
+
 
     private fun signInWithPhoneAuthCredential(credential: PhoneAuthCredential) {
         auth.signInWithCredential(credential)
