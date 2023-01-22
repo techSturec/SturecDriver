@@ -26,14 +26,16 @@ class signUp : AppCompatActivity() {
         setContentView(R.layout.activity_sign_up)
 
         val phoneNo = findViewById<EditText>(R.id.signUpPhNo)
+        val schoolCode = findViewById<EditText>(R.id.signUpSchoolCode)
+
         val driverCode = findViewById<EditText>(R.id.signUpDriverCode)
-        val password = findViewById<EditText>(R.id.signUpPassword)
+        val BusCode = findViewById<EditText>(R.id.signUpBusCode)
         val signup = findViewById<Button>(R.id.signUpBtn)
 
         auth = FirebaseAuth.getInstance()
 
         signup.setOnClickListener{
-            FirebaseDatabase.getInstance().reference.child("ss").child("Buses").child(driverCode.text.toString()).get()
+            FirebaseDatabase.getInstance().reference.child(schoolCode.text.toString()).child("Buses").child(driverCode.text.toString()).get()
                 .addOnSuccessListener {
                 if(it.exists())
                 {
@@ -80,13 +82,13 @@ class signUp : AppCompatActivity() {
     private fun saveToFirebase() {
         val phoneNo = findViewById<EditText>(R.id.signUpPhNo)
         val driverCode = findViewById<EditText>(R.id.signUpDriverCode)
-        val password = findViewById<EditText>(R.id.signUpPassword)
+
         val user:DatabaseReference = FirebaseDatabase.getInstance().reference.child("users")
 
         val userMap = HashMap<String, Any>()
         userMap["phone"] = phoneNo.text.toString().lowercase()
         userMap["driverCode"] = driverCode.text.toString().lowercase()
-        userMap["password"] = password.text.toString().lowercase()
+
 
         user.child(phoneNo.text.toString()).setValue(userMap)
             .addOnCompleteListener{task->

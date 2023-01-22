@@ -11,8 +11,18 @@
         android:layout_width="330dp"
         android:layout_height="60dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="170dp"
+        android:layout_marginTop="110dp"
         android:hint="Phone Number">
+    </EditText>
+
+    <EditText
+        android:id="@+id/signInSchoolCode"
+        android:layout_width="330dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/signInPhNo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:hint="School Code">
     </EditText>
 
 
@@ -22,17 +32,27 @@
         android:id="@+id/signInDriverCode"
         android:layout_width="330dp"
         android:layout_height="60dp"
-        android:layout_below="@+id/signInPhNo"
+        android:layout_below="@+id/signInSchoolCode"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
         android:hint="Driver Code">
     </EditText>
 
     <EditText
-        android:id="@+id/signInPassword"
+        android:id="@+id/signInBusCode"
         android:layout_width="330dp"
         android:layout_height="60dp"
         android:layout_below="@+id/signInDriverCode"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:hint="Bus Code">
+    </EditText>
+
+    <EditText
+        android:id="@+id/signInPassword"
+        android:layout_width="330dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/signInBusCode"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
         android:hint="Password ">
